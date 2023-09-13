@@ -1,1 +1,3 @@
 # csHacks
+
+Basic hack client
