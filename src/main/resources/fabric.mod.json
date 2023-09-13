@@ -1,31 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "cshacks",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "csHacks",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"CrossScar"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/CommanderGL/csHacks",
+		"sources": "https://github.com/CommanderGL/csHacks"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"icon": "assets/cshacks/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.ExampleModClient"
+			"io.github.commandergl.cshacks.Main"
+		],
+		"modmenu": [
+			"io.github.commandergl.cshacks.ModMenuConfig"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "cshacks.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -34,8 +33,5 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
